@@ -161,6 +161,8 @@
   
   .card h2 {
     color: white;
+    background: var(--primary-color);
+    padding: 10px;
   }
   
   span {

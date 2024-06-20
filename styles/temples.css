@@ -1,12 +1,14 @@
-*, *::before, *::after {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
 
 :root {
     --primary-color: #01295f;
@@ -27,7 +29,7 @@ header {
     font-family: var(--header-font);
 }
 
-h1, 
+h1,
 h2 {
     font-family: var(--header-font);
     font-weight: 900;
@@ -38,9 +40,9 @@ p,
 figcaption,
 span,
 a {
-  font-family: var(--body-font);
-  font-weight: 300;
-  font-style: normal;
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-style: normal;
 }
 
 #site-title {
@@ -58,7 +60,7 @@ a {
 }
 
 .site-nav {
-    background-color: rgb(0,0,0,0.75);
+    background-color: rgb(0, 0, 0, 0.75);
     font-family: var(--header-font);
     display: none;
     flex-basis: 100%;
@@ -80,7 +82,7 @@ a {
     width: 100%;
     display: block;
     padding: 0.25rem 0.5rem;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .active {

@@ -1,12 +1,12 @@
 // Inpute related constants
-const input = document.querySelector('#favchap');
+const input = document.querySelector('.favchap');
 
 // List related constants
-const list = document.querySelector('list');
+const list = document.querySelector('.list');
 const li = document.createElement('li');
 
 // Button related constants
-const button = document.querySelector('button');
+const button = document.querySelector('.button');
 const deleteButton = document.createElement('button');
 
 // Setting up the list

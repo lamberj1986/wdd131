@@ -138,6 +138,11 @@ figure {
     width: fit-content;
 }
 
+img {
+    border-radius: 8px;
+    width: 350px;
+}
+
 footer {
     background-color: var(--primary-color);
     color: #fff;

@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #347B98;
+    --secondary-color: #FCCB1A;
+    --third-color: #092834;
+    --main-background: #F7F0D4;
+    --contract-color: #C21460;
+  }
+
+@media (max-width: 849px) {
+    #divider {
+        border-bottom: 1px rgb(205, 205, 205) solid;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        box-sizing: border-box;
+    }
+
+    body::before,
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 10%;
+        background-color: var(--third-color);
+        z-index: -1;
+    }
+
+    body::before {
+        left: 0;
+    }
+
+    body::after {
+        right: 0;
+    }
+}

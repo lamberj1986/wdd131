@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="St John, Trunk Bay, US Virgin Islands, location information, Jeff Lambert, WDD 131">
+    <meta name="author" content="Jeff Lambert">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mooli&family=Oswald:wght@200..700&display=swap" 
+        rel="stylesheet">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="stylesheet" href="styles/places-large.css">
+
+    <!--Javascript-->
+    <script src="scripts/places.js" defer></script>
+
+    <title>WDD 131 - Dynamic Web Fundamentals - Temples</title>
+</head>
+<body>
+    <header>
+        <h1>St John, US Virgin Islands</h1>
+    </header>
+
+    <main>
+        <picture>
+            <!-- Hero image (large) by Ben Whitney - Photo taken by me, Benito78, 10/20/2003, Public Domain, https://commons.wikimedia.org/w/index.php?curid=882359 -->
+            <!-- Hero image (small) By Fred Hsu (Wikipedia:User:Fred Hsu on en.wikipedia) - Photo taken and uploaded by user, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=6882561 -->
+            <source srcset="images/st-john-large-hero.webp" media="(min-width: 850px)">
+            <img src="images/st-john-small-hero.webp" alt="Trunk Bay on St John Island, US Virgin Islands">
+        </picture>
+
+        <div class="data">
+            <h2>Location Details</h2>
+            <h3>(US Virgin Islands)</h3>
+
+            <div class="flex">
+                <div class="labels">
+                  <span><strong>Area: </strong></span>
+                  <span><strong>Population: </strong></span>
+                  <span><strong>Capital: </strong></span>
+                  <span><strong>Languages: </strong></span>
+                  <span><strong>Currency: </strong></span>
+                  <span><strong>Time Zone: </strong></span>
+                  <span><strong>CallingCode: </strong></span>
+                  <span><strong>Internet TLD: </strong></span>
+                </div>
+                <div class="values">
+                  <span>346,400 sq km</span>
+                  <span>87,146</span>
+                  <span>Charlotte Amalie</span>
+                  <span>English</span>
+                  <span>US Dollar</span>
+                  <span>UTC-4</span>
+                  <span>+1-340</span>
+                  <span>.vi</span>
+                </div>
+            </div>
+
+            <div id="divider"></div>
+
+            <div class="weather">
+                <h2>Weather</h2>
+                <img class="svg" src="images/sunrise.svg" alt="image of a sunrise" width="200" height="200">
+                <div class="flex">
+                    <div class="labels">
+                        <span><strong>Temperature: </strong></span>
+                        <span><strong>Conditions: </strong></span>
+                        <span><strong>Wind: </strong></span>
+                        <span><strong>Wind Chill: </strong></span>
+                    </div>
+                    <div class="values">
+                        <span id="temp"></span>
+                        <span>Sunny</span>
+                        <span id="wind-speed"></span>
+                        <span id="wind-chill"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span>| Jeffery Lambert | Michigan</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

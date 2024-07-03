@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #01295f;
+    --secondary-color: #2a3238;
+    --hover-color: #9bc53d;
+
+    --header-font: "Mooli", sans-serif;
+    --body-font: "Merriweather", serif;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+}
+
+picture {
+    display:block;
+}
+
+img {
+    border-radius: 8px;
+    background: #000;
+    animation: fade 5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    /* 25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    75% {
+        opacity: .75;
+    } */
+
+    100% {
+        opacity: 1;
+    }
+}

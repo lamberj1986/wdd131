@@ -1,0 +1,12 @@
+Subject:
+Great Harvest Bread Company for Grand Rapids, MI
+
+Description:
+This website would have the following pages:
+- Main page with some marketing copy, store hours, and possible location (Google Maps plugin)
+- A menu page would be available to showcase the product offerings, this could also be turned into an online ordering page
+- An application form, to allow people who want to apply for a job to submit their information online
+- (Possibly) A contact us page that would have a simple online contact submission as well as other contact details
+
+Reason:
+My parents recently looked into opening up a Great Harvest location here in Grand Rapids, MI. I figured that creating a template website for their new store could be helpful to help them structure their thoughts and possibly lead to the first iteration of their website.

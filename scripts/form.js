@@ -32,8 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (currentYear) currentYear.innerHTML = manager.displayCopyYear();
       if (lastModified) lastModified.innerHTML = `Last modified: ${manager.displayLastModified()}`;
-      
+
       populateProductDropdown();
+      initializeReviewCount();
+      setupReviewForm();
   }
 
   const products = [
@@ -74,6 +76,27 @@ document.addEventListener('DOMContentLoaded', function() {
               productSelect.appendChild(option);
           });
       }
+  }
+
+  function initializeReviewCount() {
+      const reviewCount = localStorage.getItem('reviewCount') || 0;
+      document.getElementById('reviewCount').textContent = `Reviews Completed: ${reviewCount}`;
+  }
+
+  function setupReviewForm() {
+      const reviewForm = document.getElementById('reviewForm');
+      reviewForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          incrementReviewCount();
+          reviewForm.submit();
+      });
+  }
+
+  function incrementReviewCount() {
+      let reviewCount = localStorage.getItem('reviewCount') || 0;
+      reviewCount = parseInt(reviewCount) + 1;
+      localStorage.setItem('reviewCount', reviewCount);
+      document.getElementById('reviewCount').textContent = `Reviews Completed: ${reviewCount}`;
   }
 
   main();

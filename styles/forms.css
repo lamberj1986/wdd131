@@ -1,0 +1,87 @@
+.productForm {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 1rem;
+    box-sizing: border-box;
+}
+
+.productForm div {
+    margin: 1rem 0;
+    padding: .5rem 1%;
+    display: block;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.productForm #ratingOverall {
+    margin: -15px;
+    margin-left: auto;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.productForm label {
+    display: block;
+    font-weight: 700;
+}
+
+.productForm input[type="text"],
+.productForm input[type="date"],
+.productForm select,
+.productForm textarea {
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 100%;
+    appearance: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.productForm input[type="checkbox"] {
+    margin: .75rem;
+}
+
+#overallRating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#overallRating label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#0c6dc9, #030944);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 1px 1px 4px #999;
+    font-size: 1rem;
+}
+
+.productForm #submitBtn {
+    text-align: center;
+}
+
+#reviewHTML {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}   

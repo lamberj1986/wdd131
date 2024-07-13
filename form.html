@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeff Lambert">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jeff Lambert - Form Assignment">
+
+    <title>WDD 131 - Dynamic Web Fundamentals - Jeff Lambert - Forms</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/forms.css" rel="stylesheet">
+    <link href="styles/forms-large.css" rel="stylesheet">
+    
+    <script defer="" src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" class="productForm">
+            <label>Product Name 
+                <select name="product" id="productSelect" required>
+                    <option disabled value="" selected disabled>Select a Product...</option>
+                </select>
+            </label>
+
+            <div id="ratingOverall">Overall rating:</div>
+
+            <div id="overallRating">
+                <input type="radio" name="rating" id="rate5" value="5"><label for="rate5">&star;&star;&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate4" value="4"><label for="rate4">&star;&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate3" value="3"><label for="rate3">&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate2" value="2"><label for="rate2">&star;&star;</label>
+                <input type="radio" name="rating" id="rate1" value="1"><label for="rate1">&star;</label>
+            </div>
+
+            <label>Date of Installation<input type="date" name="install" id="install" required></label>
+
+            <div class="features">
+                Which features did you find useful in the product? (check all that apply)
+            </div>
+                <label class="check"><input type="checkbox" name="durability" id="durability"> Durability</label>
+                <label class="check"><input type="checkbox" name="ease" id="ease"> Ease of Use</label>
+                <label class="check"><input type="checkbox" name="performance" id="performance"> Performance</label>
+                <label class="check"><input type="checkbox" name="design" id="design"> Design</label>
+            
+            <label>Written Review <span class="blue">(Optional)</span><textarea name="review" id="review" cols="12" rows="6"></textarea></label>
+            <label>Your Name <span class="blue">(Optional)</span><input type="text" name="username" id="username"></label>
+            
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> | Jeffery Lambert | Michigan</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

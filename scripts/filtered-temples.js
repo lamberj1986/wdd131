@@ -31,11 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         constructor(buttonEl, navEl) {
             this.btn = buttonEl;
-            this.nav = navEl
+            this.nav = navEl;
         }
 
         setMenuListener() {
-            // The .open class must be defined in the stylesheet.
             this.btn.addEventListener('click', () => {
                 this.nav.classList.toggle('open');
                 this.btn.classList.toggle('open');
@@ -127,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ];
 
-      function renderTemples(filteredTemples) {
+    function renderTemples(filteredTemples) {
         const templesAlbumSection = document.getElementById("album");
         templesAlbumSection.innerHTML = "";
-    
+
         filteredTemples.forEach((temple) => {
             const templeCard = document.createElement("div");
             templeCard.classList.add("card");
-    
+
             const templeImage = document.createElement("img");
             templeImage.src = temple.imageUrl;
             templeImage.alt = temple.templeName;
@@ -144,70 +143,69 @@ document.addEventListener('DOMContentLoaded', function() {
             let height = temple.imageUrl.split("/")[8].split("x")[1];
             templeImage.width = width;
             templeImage.height = height;
-    
+
             templeCard.appendChild(templeImage);
-    
+
             const templeInfo = document.createElement("div");
             templeInfo.classList.add("info");
-    
+
             const templeName = document.createElement("h3");
             templeName.textContent = temple.templeName;
             templeInfo.appendChild(templeName);
-    
+
             const templeLocation = document.createElement("p");
             templeLocation.textContent = temple.location;
             templeInfo.appendChild(templeLocation);
-    
+
             const templeDedicated = document.createElement("p");
             templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
             templeInfo.appendChild(templeDedicated);
-    
+
             const templeArea = document.createElement("p");
             templeArea.textContent = `Area: ${temple.area.toLocaleString()} sqft`;
             templeInfo.appendChild(templeArea);
-    
+
             templeCard.appendChild(templeInfo);
-    
+
             templesAlbumSection.appendChild(templeCard);
         });
     }
-    
+
+    function filterTemples(type) {
+        let filteredTemples;
+
+        if (type === "old") {
+            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+        } else if (type === "new") {
+            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+        } else if (type === "large") {
+            filteredTemples = temples.filter(temple => temple.area > 90000);
+        } else if (type === "small") {
+            filteredTemples = temples.filter(temple => temple.area < 10000);
+        } else {
+            filteredTemples = temples;
+        }
+
+        renderTemples(filteredTemples);
+    }
+
     // on page load, render the temples
     renderTemples(temples);
-    
+
     // render temples when clicked on the nav links
     document.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
             const type = link.id;
-            let filteredTemples;
-    
+
             // remove active class from all links
             document.querySelectorAll("nav a").forEach((navLink) => {
                 navLink.classList.remove("active");
             });
-    
-            if (type === "old") {
-                // filter temples built before 1900
-                filteredTemples = temples.filter(temple => temple.dedicated.split(",")[0] < 1900);
-                document.querySelector("#old").classList.add("active");
-            } else if (type === "new") {
-                // filter temples built after 2000
-                filteredTemples = temples.filter(temple => temple.dedicated.split(",")[0] > 2000);
-                document.querySelector("#new").classList.add("active");
-            } else if (type === "large") {
-                // filter temples larger than 90000 square feet
-                filteredTemples = temples.filter(temple => temple.area > 90000);
-                document.querySelector("#large").classList.add("active");
-            } else if (type === "small") {
-                // filter temples smaller than 10000 square feet
-                filteredTemples = temples.filter(temple => temple.area < 10000);
-                document.querySelector("#small").classList.add("active");
-            } else {
-                filteredTemples = temples;
-                document.querySelector("#home").classList.add("active");
-            }
-    
-            renderTemples(filteredTemples);
+
+            link.classList.add("active");
+
+            filterTemples(type);
         });
     });
 

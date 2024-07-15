@@ -3,30 +3,53 @@ document.addEventListener('DOMContentLoaded', function() {
         lastModified;
         copyYear;
 
-        constructor(){
+        constructor() {
             this.genCopyYear();
             this.genLastModified();
         }
 
-        genCopyYear(){
+        genCopyYear() {
             this.copyYear = new Date().getFullYear();
         }
 
-        genLastModified(){
+        genLastModified() {
             this.lastModified = document.lastModified;
         }
 
-        displayLastModified(){
+        displayLastModified() {
             return this.lastModified.toString();
         }
 
-        displayCopyYear(){
+        displayCopyYear() {
             return `${this.copyYear}`;
         }
     }
 
-    function main(){
+    class HamburgerMenu {
+        btn;
+        nav;
+
+        constructor(buttonEl, navEl) {
+            this.btn = buttonEl;
+            this.nav = navEl;
+        }
+
+        setMenuListener() {
+            this.btn.addEventListener('click', () => {
+                this.nav.classList.toggle('open');
+                this.btn.classList.toggle('open');
+            });
+        }
+    }
+
+    function main() {
         const manager = new DateManager();
+
+        const menuBtn = document.querySelector('.menu-button');
+        const navi = document.querySelector('.site-nav');
+        const hamburger = new HamburgerMenu(menuBtn, navi);
+        hamburger.setMenuListener();
+
         const currentYear = document.getElementById('currentYear');
         const lastModified = document.getElementById('lastModified');
 

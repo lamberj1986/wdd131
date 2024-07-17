@@ -87,10 +87,22 @@ document.addEventListener('DOMContentLoaded', function() {
       const reviewForm = document.getElementById('reviewForm');
       reviewForm.addEventListener('submit', function(event) {
           event.preventDefault();
+          saveReviewToLocalStorage();
           incrementReviewCount();
           reviewForm.submit();
       });
   }
+
+  function saveReviewToLocalStorage() {
+    const formData = new FormData(document.getElementById('reviewForm'));
+    const review = {};
+    formData.forEach((value, key) => {
+        review[key] = value;
+    });
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviews.push(review);
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+}
 
   function incrementReviewCount() {
       let reviewCount = localStorage.getItem('reviewCount') || 0;

@@ -23,7 +23,7 @@
         <h1>Product Review</h1>
     </header>
     <main>
-        <form action="review.html" method="get" class="productForm">
+        <form action="review.html" method="get" class="productForm" id="reviewForm">
             <label>Product Name 
                 <select name="product" id="productSelect" required>
                     <option value="" selected disabled>Select a Product...</option>
@@ -33,11 +33,11 @@
             <div id="ratingOverall">Overall rating:</div>
 
             <div id="overallRating">
-                <input type="radio" name="rating" id="rate5" value="5"><label for="rate5">&star;&star;&star;&star;&star;</label>
-                <input type="radio" name="rating" id="rate4" value="4"><label for="rate4">&star;&star;&star;&star;</label>
-                <input type="radio" name="rating" id="rate3" value="3"><label for="rate3">&star;&star;&star;</label>
-                <input type="radio" name="rating" id="rate2" value="2"><label for="rate2">&star;&star;</label>
-                <input type="radio" name="rating" id="rate1" value="1"><label for="rate1">&star;</label>
+                <input type="radio" name="rating" id="rate5" value="5" required><label for="rate5">&star;&star;&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate4" value="4" required><label for="rate4">&star;&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate3" value="3" required><label for="rate3">&star;&star;&star;</label>
+                <input type="radio" name="rating" id="rate2" value="2" required><label for="rate2">&star;&star;</label>
+                <input type="radio" name="rating" id="rate1" value="1" required><label for="rate1">&star;</label>
             </div>
 
             <label>Date of Installation<input type="date" name="install" id="install" required></label>

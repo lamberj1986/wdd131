@@ -1,174 +1,158 @@
 /* Colors */
 :root {
-    --primary-color: #01295f;
-    --secondary-color: #2a3238;
-    --hover-color: #9bc53d;
-  }
-  
-  /* Apply fonts */
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
-  
-  h1,
-  h2 {
-    font-family: "Mooli", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-  p,
-  figcaption,
-  span,
-  a {
-    font-family: "Mooli", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  header h1 {
-    margin: 0;
-    padding: 15px;
-    height: 100%;
-    background-color: var(--primary-color);
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
-
-  dt {
-    font-weight: bold;
-  }
-
-  dl,
-  dd {
-    margin: 25px 15px 25px 15px;
-    max-width: 98%;
-    font-size: 0.9rem;
-    font-family: "Mooli", sans-serif;
-  }
-
-  dd {
-    margin-bottom: 1em;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-    background-color: var(--secondary-color);
-  }
-  
-  footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-  }
-  
-  footer p {
-    padding: 10px;
-    margin: 0px;
-  }
-  
-  header {
-    margin: 0px 0px 0px 0px;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: var(--hover-color);
-    text-decoration: underline;
-  }
-  
-  main {
-    margin: 25px 15px 25px 15px;
-    min-height: 600px;
-    max-width: 98%;
-  }
-  
-  p {
-    padding: 20px;
-  }
-  
-  img {
-    margin: 20px;
-    border: 1px gray solid;
-    height: 200px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin: 25px 0px 0px 0px;
-  }
-  
-  span {
-    padding: 10px;
-  }
-  
-  noscript {
-    padding: 20px;
-  }
-  
-  figcaption {
-    text-align: center;
-    font-style: italic;
-  }
-  
-  .colors {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .colors th {
-    background-color: #999;
-  }
-
-  .colors td {
-    width: 33%;
-    height: 3em;
-    padding: .5rem;
-    text-align: center;
-  }
-  .mooli {
-    font-family: "Mooli", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  --primary-color: #01295f;
+  --secondary-color: #2a3238;
+  --hover-color: #9bc53d;
 }
 
-.merri {
-    font-family: "Merriweather", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+/* Apply fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+
+h1,
+h2 {
+  font-family: "Mooli", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
-.oswald {
-    font-family: "Oswald", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+p,
+figcaption,
+span,
+a {
+  font-family: "Mooli", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.blue {
-    background-color: var(--primary-color);
-    color: #fff;
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.gray {
-    background-color: var(--secondary-color);
-    color: #fff;
+header h1 {
+  margin: 0;
+  padding: 15px;
+  background-color: var(--primary-color);
 }
 
-.yellow {
-    background-color: var(--hover-color);
+h1 {
+  color: white;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  /* flex: 1; */
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+main > nav.sub-nav {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-bar li a {
+  display: block;
+  padding: 10px;
+  background-color: #5A6B77;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.nav-bar li a:hover {
+  background-color: var(--hover-color);
+}
+
+.nav-bar li a.active {
+  background-color: var(--hover-color);
+}
+
+main .sub-section {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card .info {
+  padding: 10px 0;
+}
+
+.card .info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.card .info p {
+  margin: 5px 0;
 }

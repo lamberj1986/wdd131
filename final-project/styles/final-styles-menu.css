@@ -1,0 +1,169 @@
+/* Colors */
+:root {
+    --primary-color: #01295f;
+    --secondary-color: #2a3238;
+    --hover-color: #9bc53d;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+  
+  h1,
+  h2 {
+    font-family: "Mooli", sans-serif;
+    font-weight: 900;
+  }
+  
+  p,
+  figcaption,
+  span,
+  a {
+    font-family: "Mooli", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 15px;
+    background-color: var(--primary-color);
+    font-style: italic;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  header h2 {
+    text-align: center;
+    font-weight: 1200;
+    font-size:xx-large;
+  }
+  
+  header h3 {
+    text-align: right;
+    font-style: italic;
+    font-size: smaller;
+    padding-right: 10px;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  main > nav.sub-nav {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .nav-bar li a {
+    display: block;
+    padding: 10px;
+    background-color: #5A6B77;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .nav-bar li a:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .nav-bar li a.active {
+    background-color: var(--hover-color);
+  }
+  
+  main .sub-section {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .card .info {
+    padding: 10px 0;
+  }
+  
+  .card .info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .card .info p {
+    margin: 5px 0;
+  }

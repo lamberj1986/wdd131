@@ -138,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function() {
             sugar: 46,
             protein: 7,
             imageURL: "images/blondie.webp",
+            // final-project/images/blondie.webp
+            // /Users/alischoolmac/Desktop/Jeff Stuff/BYU-I Course Work/Coding Classwork/wdd131/final-project/images/blondie.webp
         },
         {
             itemName: "Pumpkin Chocolate Chip Teacake",
@@ -186,11 +188,11 @@ document.addEventListener('DOMContentLoaded', function() {
             menuCard.classList.add("card");
 
             const menuImage = document.createElement("img");
-            menuImage.src = menu.imageUrl;
-            menuImage.alt = menu.itemName;
+            menuImage.src = item.imageURL;
+            menuImage.alt = item.itemName;
             menuImage.loading = "lazy";
-            menuImage.width = 250;
-            menuImage.height = 150;
+            menuImage.width = 125;
+            menuImage.height = 75;
 
             menuCard.appendChild(menuImage);
 
@@ -198,24 +200,20 @@ document.addEventListener('DOMContentLoaded', function() {
             menuInfo.classList.add("info");
 
             const itemName = document.createElement("h3");
-            itemName.textContent = menu.itemName;
+            itemName.textContent = item.itemName;
             menuInfo.appendChild(itemName);
 
-            // const itemType = document.createElement("p");
-            // itemType.textContent = menu.type;
-            // menuInfo.appendChild(itemType);
-
             const itemCalories = document.createElement("p");
-            itemCalories.textContent = `Calories: ${menu.servingCalories.toLocaleString()}`;
+            itemCalories.textContent = `Calories: ${item.servingCalories.toLocaleString()}`;
             menuInfo.appendChild(itemCalories);
 
             const fatAndCarbs = document.createElement("p");
-            fatAndCarbs.textContent = `Fat: ${menu.totalFat.toLocaleString()} | Carbs: ${menu.carbs.toLocaleString()}`;
+            fatAndCarbs.textContent = `Fat: ${item.totalFat.toLocaleString()} | Carbs: ${item.carbs.toLocaleString()}`;
             menuInfo.appendChild(fatAndCarbs);
 
             const sugarAndProtien = document.createElement("p");
-            sugarAndProtien.textContent = `Sugar: ${menu.sugar.toLocaleString()} | Protien: ${menu.protein.toLocaleString()}`;
-            menuInfo.appendChild(fatAndCarbs);
+            sugarAndProtien.textContent = `Sugar: ${item.sugar.toLocaleString()} | Protien: ${item.protein.toLocaleString()}`;
+            menuInfo.appendChild(sugarAndProtien);
 
             menuCard.appendChild(menuInfo);
 
@@ -234,9 +232,9 @@ document.addEventListener('DOMContentLoaded', function() {
             filteredMenu = menu.filter(menu => menu.type = "Goodie");
         } else if (type === "lowCal") {
             filteredMenu = menu.filter(menu => menu.servingCalories < 150);
-        } else if (type === "highProtien") {
+        } else if (type === "highPro") {
             filteredMenu = menu.filter(menu => menu.protein > 20);
-        } else if (type === "highFiber") {
+        } else if (type === "highFib") {
             filteredMenu = menu.filter(menu => menu.fiber > 5);
         } else {
             filteredMenu = menu;
@@ -276,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const manager = new DateManager();
 
         const menuBtn = document.querySelector('.menu-button');
-        const navi = document.querySelector('.site-nav');
+        const navi = document.querySelector('.sub-nav');
         const hamburger = new HamburgerMenu(menuBtn, navi);
         hamburger.setMenuListener();
 

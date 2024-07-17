@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-
+    
     function main() {
         const manager = new DateManager();
 

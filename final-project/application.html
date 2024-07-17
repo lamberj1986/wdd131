@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/final-styles-large.css">
 
     <!--Javascript-->
-    <script src="scripts/final-script.js" defer></script>
+    <script src="scripts/final-script-form.js" defer></script>
 
     <title>WDD 131 - Dynamic Web Fundamentals - Final Project - Application</title>
 </head>
@@ -35,7 +35,39 @@
     </header>
 
     <main>
-        
+        <main>
+            <form action="application.html" method="get" class="form" id="form">
+                <label>Product Name 
+                    <select name="product" id="productSelect" required>
+                        <option value="" selected disabled>Select a Product...</option>
+                    </select>
+                </label>
+    
+                <div id="ratingOverall">Overall rating:</div>
+    
+                <div id="overallRating">
+                    <input type="radio" name="rating" id="rate5" value="5" required><label for="rate5">&star;&star;&star;&star;&star;</label>
+                    <input type="radio" name="rating" id="rate4" value="4" required><label for="rate4">&star;&star;&star;&star;</label>
+                    <input type="radio" name="rating" id="rate3" value="3" required><label for="rate3">&star;&star;&star;</label>
+                    <input type="radio" name="rating" id="rate2" value="2" required><label for="rate2">&star;&star;</label>
+                    <input type="radio" name="rating" id="rate1" value="1" required><label for="rate1">&star;</label>
+                </div>
+    
+                <label>Date of Installation<input type="date" name="install" id="install" required></label>
+    
+                <div class="features">
+                    Which features did you find useful in the product? (check all that apply)
+                </div>
+                    <label class="check"><input type="checkbox" name="durability" id="durability"> Durability</label>
+                    <label class="check"><input type="checkbox" name="ease" id="ease"> Ease of Use</label>
+                    <label class="check"><input type="checkbox" name="performance" id="performance"> Performance</label>
+                    <label class="check"><input type="checkbox" name="design" id="design"> Design</label>
+                
+                <label>Written Review <span class="blue">(Optional)</span><textarea name="review" id="review" cols="12" rows="6"></textarea></label>
+                <label>Your Name <span class="blue">(Optional)</span><input type="text" name="username" id="username"></label>
+                
+                <input type="submit" value="Post Review">
+            </form>
     </main>
 
     <footer>

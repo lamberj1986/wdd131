@@ -1,7 +1,5 @@
 @media screen and (min-width: 750px){
-    main {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+
 
     .nav-bar {
         display: flex;
@@ -22,5 +20,10 @@
     #site-title {
         padding: 0.5rem;
         font-size: 1.75rem;
+    }
+
+    form {
+        padding: 15px;
+        box-shadow: none;
     }
 }

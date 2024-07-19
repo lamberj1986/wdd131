@@ -37,36 +37,23 @@
     <main>
         <main>
             <form action="application.html" method="get" class="form" id="form">
-                <label>Product Name 
-                    <select name="product" id="productSelect" required>
-                        <option value="" selected disabled>Select a Product...</option>
-                    </select>
-                </label>
+                <label>Full Name<input type="text" name="fullName" id="fullName" required></label>
     
-                <div id="ratingOverall">Overall rating:</div>
+                <label>When would you be able to start?<input type="date" name="start" id="start" required></label>
     
-                <div id="overallRating">
-                    <input type="radio" name="rating" id="rate5" value="5" required><label for="rate5">&star;&star;&star;&star;&star;</label>
-                    <input type="radio" name="rating" id="rate4" value="4" required><label for="rate4">&star;&star;&star;&star;</label>
-                    <input type="radio" name="rating" id="rate3" value="3" required><label for="rate3">&star;&star;&star;</label>
-                    <input type="radio" name="rating" id="rate2" value="2" required><label for="rate2">&star;&star;</label>
-                    <input type="radio" name="rating" id="rate1" value="1" required><label for="rate1">&star;</label>
+                <div class="daysAvailable">
+                    What days are you available to work? (We are closed on Sunday)
                 </div>
-    
-                <label>Date of Installation<input type="date" name="install" id="install" required></label>
-    
-                <div class="features">
-                    Which features did you find useful in the product? (check all that apply)
-                </div>
-                    <label class="check"><input type="checkbox" name="durability" id="durability"> Durability</label>
-                    <label class="check"><input type="checkbox" name="ease" id="ease"> Ease of Use</label>
-                    <label class="check"><input type="checkbox" name="performance" id="performance"> Performance</label>
-                    <label class="check"><input type="checkbox" name="design" id="design"> Design</label>
+                    <label class="check"><input type="checkbox" name="mon" id="mon"> Monday</label>
+                    <label class="check"><input type="checkbox" name="tue" id="tue"> Tuesday</label>
+                    <label class="check"><input type="checkbox" name="wed" id="wed"> Wednesday</label>
+                    <label class="check"><input type="checkbox" name="thu" id="thu"> Thursday</label>
+                    <label class="check"><input type="checkbox" name="fri" id="fri"> Friday</label>
+                    <label class="check"><input type="checkbox" name="sat" id="sat"> Saturday</label>
                 
-                <label>Written Review <span class="blue">(Optional)</span><textarea name="review" id="review" cols="12" rows="6"></textarea></label>
-                <label>Your Name <span class="blue">(Optional)</span><input type="text" name="username" id="username"></label>
+                <label>Your Resume / Work History <textarea name="review" id="review" cols="12" rows="6"></textarea></label>
                 
-                <input type="submit" value="Post Review">
+                <input type="submit" value="Submit Application">
             </form>
     </main>
 

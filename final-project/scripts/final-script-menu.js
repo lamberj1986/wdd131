@@ -225,11 +225,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let filteredMenu;
 
         if (type === "bread") {
-            filteredMenu = menu.filter(menu => menu.type = "Bread");
+            filteredMenu = menu.filter(menu => menu.type === "Bread");
         } else if (type === "sandwich") {
-            filteredMenu = menu.filter(menu => menu.type = "Sandwich");
+            filteredMenu = menu.filter(menu => menu.type === "Sandwich");
         } else if (type === "goodie") {
-            filteredMenu = menu.filter(menu => menu.type = "Goodie");
+            filteredMenu = menu.filter(menu => menu.type === "Goodie");
         } else if (type === "lowCal") {
             filteredMenu = menu.filter(menu => menu.servingCalories < 150);
         } else if (type === "highPro") {

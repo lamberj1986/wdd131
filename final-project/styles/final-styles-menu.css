@@ -1,11 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap'); */
+
 /* Colors */
 :root {
   --primary-color: #01295f;
   --secondary-color: #2a3238;
   --hover-color: #9bc53d;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
 
 h1,
 h2 {
@@ -43,7 +43,7 @@ h1 {
 
 header h2 {
   text-align: center;
-  font-weight: 1200;
+  font-weight: 1000;
   font-size: xx-large;
 }
 
@@ -140,7 +140,6 @@ main .sub-section {
   padding: 20px;
   margin-left: 240px;
   margin-top: -850px;
-  grid
 }
 
 .grid-container {

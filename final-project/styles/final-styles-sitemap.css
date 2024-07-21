@@ -1,0 +1,174 @@
+/* Colors */
+:root {
+    --primary-color: #01295f;
+    --secondary-color: #2a3238;
+    --hover-color: #9bc53d;
+  }
+  
+  /* Apply fonts */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+  
+  h1,
+  h2 {
+    font-family: "Mooli", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  p,
+  figcaption,
+  span,
+  a {
+    font-family: "Mooli", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 15px;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dl,
+  dd {
+    margin: 25px 15px 25px 15px;
+    max-width: 98%;
+    font-size: 0.9rem;
+    font-family: "Mooli", sans-serif;
+  }
+
+  dd {
+    margin-bottom: 1em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  footer p {
+    padding: 10px;
+    margin: 0px;
+  }
+  
+  header {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+  
+  main {
+    margin: 25px 15px 25px 15px;
+    min-height: 600px;
+    max-width: 98%;
+  }
+  
+  p {
+    padding: 20px;
+  }
+  
+  img {
+    margin: 20px;
+    border: 1px gray solid;
+    height: 200px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+  
+  span {
+    padding: 10px;
+  }
+  
+  noscript {
+    padding: 20px;
+  }
+  
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .colors {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .colors th {
+    background-color: #999;
+  }
+
+  .colors td {
+    width: 33%;
+    height: 3em;
+    padding: .5rem;
+    text-align: center;
+  }
+  .mooli {
+    font-family: "Mooli", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.merri {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.blue {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.gray {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.yellow {
+    background-color: var(--hover-color);
+}

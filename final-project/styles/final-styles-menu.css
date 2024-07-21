@@ -14,8 +14,6 @@ h2 {
 }
 
 p,
-figcaption,
-span,
 a {
   font-family: "Mooli", sans-serif;
   font-weight: 300;
@@ -135,14 +133,14 @@ main > nav.sub-nav {
   background-color: var(--hover-color);
 }
 
-main .sub-section {
+main .album {
   flex-grow: 1;
   padding: 20px;
   margin-left: 240px;
-  margin-top: -850px;
+  margin-top: -875px;
 }
 
-.grid-container {
+.album {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
